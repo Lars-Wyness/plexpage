@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'plexpage';
+
+  goToPort(port: string) {
+    window.location.href = `http://192.168.1.24:${port}`;
+  }
 }
