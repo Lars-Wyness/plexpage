@@ -1,16 +1,17 @@
 <div class="mat-app-background background">
-<mat-toolbar color="accent">
-  <h1>Plex server</h1>
-</mat-toolbar>
+  <mat-toolbar color="accent">
+    <h1>Plex server</h1>
+  </mat-toolbar>
 
+  <h3 class="subtitle">Click buttons to access sites:</h3>
   <div class="buttons-container">
     <app-site-item
       [port]="'32400/web'"
       [imageName]="'plexicon.png'"
       [label]="'Plex'"
-      [hasInfoPane]="true"
-      [infoPaneHeader]="'Watch TV & Movies'"
-    ></app-site-item>
+      [hasSimpleInfo]="true"
+      ><span simple>Watch TV & Movies</span></app-site-item
+    >
     <app-site-item
       [port]="'5000'"
       [imageName]="'ombiicon.png'"
@@ -18,28 +19,29 @@
       [hasInfoPane]="true"
       [infoPaneHeader]="'Request TV & Movies'"
       [infoPaneDescription]="'Click for login details'"
-    >
-      Usernames below. Password is not required and it shouldn't ask for one
-      <ul>
-        <li>Lars</li>
-        <li>Debby</li>
-        <li>Stephen</li>
-      </ul>
+      ><span dropdown>
+        Usernames below. Password is not required and it shouldn't ask for one
+        <ul>
+          <li>Lars</li>
+          <li>Debby</li>
+          <li>Stephen</li>
+        </ul>
+      </span>
     </app-site-item>
     <app-site-item
       [port]="'7878'"
       [imageName]="'radarrlogo.png'"
       [label]="'Radarr'"
-      [hasInfoPane]="true"
-      [infoPaneHeader]="'Movies administration'"
-    ></app-site-item>
+      [hasSimpleInfo]="true"
+      ><span simple>Movies administration</span></app-site-item
+    >
     <app-site-item
       [port]="'8989'"
       [imageName]="'sonarrlogo.png'"
       [label]="'Sonarr'"
-      [hasInfoPane]="true"
-      [infoPaneHeader]="'TV administration'"
-    ></app-site-item>
+      [hasSimpleInfo]="true"
+      ><span simple>TV administration</span></app-site-item
+    >
     <app-site-item
       [port]="'8112'"
       [imageName]="'delugelogo.png'"
@@ -47,20 +49,21 @@
       [hasInfoPane]="true"
       [infoPaneHeader]="'Torrents'"
       [infoPaneDescription]="'Click for login details'"
-    >
-      Username: Password
-      <ul>
-        <li>deluge: deluge</li>
-      </ul>
-      Note: This may not ask for a username and just a password. If so, the
-      password is as above.
+      ><span dropdown>
+        Username: Password
+        <ul>
+          <li>deluge: deluge</li>
+        </ul>
+        Note: This may not ask for a username and just a password. If so, the
+        password is as above.
+      </span>
     </app-site-item>
     <app-site-item
       [port]="'9117'"
       [imageName]="'jackettlogo.png'"
       [label]="'Jackett'"
-      [hasInfoPane]="true"
-      [infoPaneHeader]="'Indexes'"
-    ></app-site-item>
+      [hasSimpleInfo]="true"
+      ><span simple>Indexes</span></app-site-item
+    >
   </div>
 </div>

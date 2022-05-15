@@ -7,20 +7,25 @@
       (click)="goToPort(port)"
     >
       <div class="button-content-container">
-        <img class="button-image" src="../assets/images/{{imageName}}" />
+        <img class="button-image" src="../assets/images/{{ imageName }}" />
         <span class="button-label"> {{ label }} </span>
       </div>
     </button>
+  </span>
+  <span class="simple-info-container" *ngIf="hasSimpleInfo">
+    <ng-content select="[simple]"></ng-content>
   </span>
   <span class="expansion-panel" *ngIf="hasInfoPane">
     <mat-accordion class="expansion-panel">
       <mat-expansion-panel [hideToggle]="hideToggle">
         <mat-expansion-panel-header>
           <mat-panel-title>{{ infoPaneHeader }} </mat-panel-title>
-          <mat-panel-description> {{ infoPaneDescription }} </mat-panel-description>
+          <mat-panel-description>
+            {{ infoPaneDescription }}
+          </mat-panel-description>
         </mat-expansion-panel-header>
         <span #infoPaneContent>
-            <ng-content></ng-content>
+          <ng-content select="[dropdown]"></ng-content>
         </span>
       </mat-expansion-panel>
     </mat-accordion>

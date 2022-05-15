@@ -12,6 +12,7 @@ export class SiteItemComponent implements AfterViewInit {
   @Input() imageName!: string;
   @Input() label = "";
   @Input() hasInfoPane = false;
+  @Input() hasSimpleInfo = false;
   @Input() infoPaneHeader?: string;
   @Input() infoPaneDescription?: string;
   hideToggle = false;
