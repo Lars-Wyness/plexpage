@@ -36,3 +36,25 @@
 .expansion-panel {
     width: 100%;
 }
+
+.info-font {
+    color: #aaa;
+}
+
+@media (max-width: 719px) {
+    .button-container {
+        display: block;
+    }
+
+    .simple-info-container {
+        padding: 8px 20px;
+    }
+
+    .expansion-panel {
+        padding: 0 20px;
+        width: 90%;
+    }
+    .fancy-button {
+        width: 100%
+    }
+}

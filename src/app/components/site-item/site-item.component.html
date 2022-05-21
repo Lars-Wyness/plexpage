@@ -1,5 +1,5 @@
 <div class="button-container">
-  <span class="row-item-container">
+  <div class="row-item-container">
     <button
       class="fancy-button"
       mat-stroked-button
@@ -11,15 +11,15 @@
         <span class="button-label"> {{ label }} </span>
       </div>
     </button>
-  </span>
-  <span class="simple-info-container" *ngIf="hasSimpleInfo">
+  </div>
+  <div class="simple-info-container info-font" *ngIf="hasSimpleInfo">
     <ng-content select="[simple]"></ng-content>
-  </span>
-  <span class="expansion-panel" *ngIf="hasInfoPane">
+  </div>
+  <div class="expansion-panel" *ngIf="hasInfoPane">
     <mat-accordion class="expansion-panel">
       <mat-expansion-panel [hideToggle]="hideToggle">
-        <mat-expansion-panel-header>
-          <mat-panel-title>{{ infoPaneHeader }} </mat-panel-title>
+        <mat-expansion-panel-header class>
+          <mat-panel-title class="info-font">{{ infoPaneHeader }} </mat-panel-title>
           <mat-panel-description>
             {{ infoPaneDescription }}
           </mat-panel-description>
@@ -29,5 +29,5 @@
         </span>
       </mat-expansion-panel>
     </mat-accordion>
-  </span>
+  </div>
 </div>
