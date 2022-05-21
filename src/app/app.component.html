@@ -12,7 +12,7 @@
       [hasSimpleInfo]="true"
       ><span simple>Watch TV & Movies</span></app-site-item
     >
-    <app-site-item
+    <!-- <app-site-item
       [port]="'5000'"
       [imageName]="'ombiicon.png'"
       [label]="'Ombi'"
@@ -25,6 +25,22 @@
           <li>Lars</li>
           <li>Debby</li>
           <li>Stephen</li>
+        </ul>
+      </span>
+    </app-site-item> -->
+    <app-site-item
+      [port]="'5000'"
+      [imageName]="'ombiicon.png'"
+      [label]="'Ombi'"
+      [hasInfoPane]="true"
+      [infoPaneHeader]="'Request TV & Movies'"
+      [infoPaneDescription]="'Click for login details'"
+      ><span dropdown>
+        Usernames below. Only the admin account needs a password. The other accounts shouldn't ask for one 
+        <ul>
+          <li>Anne</li>
+          <li>John</li>
+          <li>admin: password</li>
         </ul>
       </span>
     </app-site-item>
@@ -42,7 +58,7 @@
       [hasSimpleInfo]="true"
       ><span simple>TV administration</span></app-site-item
     >
-    <app-site-item
+    <!-- <app-site-item
       [port]="'8112'"
       [imageName]="'delugelogo.png'"
       [label]="'Deluge'"
@@ -53,6 +69,22 @@
         Username: Password
         <ul>
           <li>deluge: deluge</li>
+        </ul>
+        Note: This may not ask for a username and just a password. If so, the
+        password is as above.
+      </span>
+    </app-site-item> -->
+    <app-site-item
+      [port]="'9091'"
+      [imageName]="'transmissionlogo.png'"
+      [label]="'Transmission'"
+      [hasInfoPane]="true"
+      [infoPaneHeader]="'Torrents'"
+      [infoPaneDescription]="'Click for login details'"
+      ><span dropdown>
+        Username: Password
+        <ul>
+          <li>transmission: transmission</li>
         </ul>
         Note: This may not ask for a username and just a password. If so, the
         password is as above.
