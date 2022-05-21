@@ -22,7 +22,7 @@ export class SiteItemComponent implements AfterViewInit {
   }
 
   goToPort(port: string) {
-    window.location.href = `http://192.168.1.163:${port}`;
+    window.location.href = `http://192.168.1.24:${port}`;
   }
 
   isInfoContentEmpty() {
